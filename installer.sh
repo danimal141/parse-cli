@@ -7,15 +7,16 @@ if [ -e ${TMP_FILE} ]; then
 fi
 echo "Fetching latest version ..."
 
-latest=3.0.6-beta-5
+latest="3.0.6-beta-5"
 # latest=$(curl https://parsecli.back4app.com/supported?version=latest)
 
 
 case `uname` in
   "Linux" )
-      url="https://github.com/back4app/parse-cli/release/download/release_${latest}/b4a_linux"
+      url="https://github.com/back4app/parse-cli/release/download/release_${latest}/b4a_linux";;
   "Darwin" )
-      url="https://github.com/back4app/parse-cli/release/download/release_${latest}/b4a"
+      url="https://github.com/back4app/parse-cli/release/download/release_${latest}/b4a";;
+esac
 
 
 curl --progress-bar --compressed -Lo ${TMP_FILE} ${url}
