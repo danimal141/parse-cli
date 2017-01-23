@@ -14,7 +14,6 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/bgentry/heroku-go"
 	"github.com/facebookgo/clock"
 	"github.com/facebookgo/ensure"
 	"github.com/facebookgo/parse"
@@ -22,7 +21,7 @@ import (
 )
 
 const (
-	Version        = "3.0.6-beta-4"
+	Version        = "3.0.6-beta-5"
 	CloudDir       = "cloud"
 	HostingDir     = "public"
 	DefaultBaseURL = "https://parsecli.back4app.com/"
@@ -42,7 +41,6 @@ type Env struct {
 	Exit            func(int)
 	Clock           clock.Clock
 	ParseAPIClient  *ParseAPIClient
-	HerokuAPIClient *heroku.Client
 }
 
 type Harness struct {

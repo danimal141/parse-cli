@@ -20,7 +20,7 @@ import (
 	"github.com/skratchdot/open-golang/open"
 )
 
-const keysURL = "https://www.parse.com/account/keys"
+const keysURL = "http://dashboard.back4app.com/classic#/wizard/account-key"
 
 type Credentials struct {
 	Email    string
@@ -44,7 +44,7 @@ Please follow instructions at %q to generate a new one.
 `
 	keyNotConfigured = regexp.MustCompile("Account key not configured")
 
-	parseNetrc = filepath.Join(".parse", "netrc")
+	parseNetrc = filepath.Join(".back4app", "netrc")
 )
 
 func accountKeyNotConfigured(err error) bool {
@@ -79,6 +79,7 @@ func (l *Login) populateCreds(e *Env) error {
 	if password != "" {
 		l.Credentials.Password = password
 	}
+
 	return nil
 }
 
@@ -259,7 +260,7 @@ To save time logging in, you should create an account key.
 			fmt.Fprintln(
 				e.Out,
 				`Type "b4a configure accountkey" to create a new account key.
-Read more at: https://parse.com/docs/cloudcode/guide#command-line-account-keys`)
+Read more at: http://docs.back4app.com/docs/integrations/command-line-interface/account-keys/`)
 			return "", stackerr.New("Account key not configured")
 		}
 
@@ -289,7 +290,7 @@ func (l *Login) AuthUser(e *Env, strict bool) error {
 		fmt.Fprintln(
 			e.Out,
 			`Type "b4a configure accountkey" to create a new account key.
-Read more at: https://parse.com/docs/cloudcode/guide#command-line-account-keys
+Read more at: http://docs.back4app.com/docs/integrations/command-line-interface/account-keys/
 
 Please login to Back4App using your email and password.`,
 		)
@@ -302,6 +303,7 @@ Please login to Back4App using your email and password.`,
 			return err
 		}
 		apps.Login.Credentials = l.Credentials
+
 		_, err = apps.RestFetchApps(e)
 		if err == nil {
 			return nil
