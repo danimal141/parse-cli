@@ -3,7 +3,7 @@ package main
 import (
 	"testing"
 
-	"github.com/ParsePlatform/parse-cli/parsecli"
+	"github.com/back4app/parse-cli/parsecli"
 	"github.com/facebookgo/ensure"
 )
 

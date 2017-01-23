@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ParsePlatform/parse-cli/parsecli"
+	"github.com/back4app/parse-cli/parsecli"
 	"github.com/facebookgo/clock"
 	"github.com/facebookgo/stackerr"
 )

@@ -5,9 +5,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/ParsePlatform/parse-cli/parsecli"
-	"github.com/ParsePlatform/parse-cli/parsecmd"
-	"github.com/ParsePlatform/parse-cli/webhooks"
+	"github.com/back4app/parse-cli/parsecli"
+	"github.com/back4app/parse-cli/parsecmd"
+	"github.com/back4app/parse-cli/webhooks"
 	"github.com/spf13/cobra"
 )
 

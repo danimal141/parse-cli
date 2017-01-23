@@ -7,8 +7,8 @@ import (
 	"sort"
 	"strconv"
 
-	"github.com/ParsePlatform/parse-cli/parsecli"
-	"github.com/ParsePlatform/parse-cli/webhooks"
+	"github.com/back4app/parse-cli/parsecli"
+	"github.com/back4app/parse-cli/webhooks"
 	"github.com/facebookgo/stackerr"
 	"github.com/spf13/cobra"
 )
