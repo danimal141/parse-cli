@@ -7,8 +7,8 @@ if [ -e ${TMP_FILE} ]; then
 fi
 echo "Fetching latest version ..."
 
-latest="3.0.6-beta-5"
-# latest=$(curl https://parsecli.back4app.com/supported?version=latest)
+# latest="3.0.6-beta-5"
+latest=$(curl https://parsecli.back4app.com/supported?version=latest | grep -Po '\d+.\d+.\d+-beta-\d+')
 
 
 case `uname` in
