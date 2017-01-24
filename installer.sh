@@ -13,9 +13,9 @@ latest=$(curl https://parsecli.back4app.com/supported?version=latest | grep -Po 
 
 case `uname` in
   "Linux" )
-      url="https://github.com/back4app/parse-cli/release/download/release_${latest}/b4a_linux" ;;
+      url="https://github.com/back4app/parse-cli/releases/download/release_${latest}/b4a_linux";;
   "Darwin" )
-      url="https://github.com/back4app/parse-cli/release/download/release_${latest}/b4a" ;;
+      url="https://github.com/back4app/parse-cli/releases/download/release_${latest}/b4a";;
 esac
 
 
