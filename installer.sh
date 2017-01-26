@@ -10,7 +10,6 @@ echo "Fetching latest version ..."
 # latest="3.0.6-beta-5"
 latest=$(curl https://parsecli.back4app.com/supported?version=latest | python -c "import sys, json; print(json.load(sys.stdin)['version'])")
 
-
 case `uname` in
   "Linux" )
       url="https://github.com/back4app/parse-cli/releases/download/release_${latest}/b4a_linux";;

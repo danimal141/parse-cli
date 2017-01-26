@@ -10,7 +10,7 @@ import (
 	"runtime"
 
 	"github.com/DHowett/go-plist"
-	"github.com/ParsePlatform/parse-cli/parsecli"
+	"github.com/back4app/parse-cli/parsecli"
 	"github.com/facebookgo/stackerr"
 	"github.com/inconshreveable/go-update"
 	"github.com/mitchellh/go-homedir"

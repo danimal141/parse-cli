@@ -6,7 +6,7 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/ParsePlatform/parse-cli/parsecli"
+	"github.com/back4app/parse-cli/parsecli"
 	"github.com/facebookgo/ensure"
 	"github.com/facebookgo/jsonpipe"
 	"github.com/facebookgo/parse"

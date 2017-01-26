@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/ParsePlatform/parse-cli/parsecli"
-	"github.com/ParsePlatform/parse-cli/parsecmd"
+	"github.com/back4app/parse-cli/parsecli"
+	"github.com/back4app/parse-cli/parsecmd"
 	"github.com/facebookgo/stackerr"
 	"github.com/spf13/cobra"
 )
