@@ -31,6 +31,9 @@ func initProject(t *testing.T, root string) ([]string, []string) {
 		ensure.Nil(t, os.MkdirAll(dir, 0755))
 	}
 
+	node_modules := filepath.Join(root, "node_modules")
+	ensure.Nil(t, os.MkdirAll(node_modules, 0755))
+
 	files := []string{
 		filepath.Join(root, "tester", "test"),
 		filepath.Join(root, "tester", "inside", "tester", "test"),
@@ -41,6 +44,10 @@ func initProject(t *testing.T, root string) ([]string, []string) {
 		ensure.Nil(t, err)
 		defer f.Close()
 	}
+
+	f, err := os.Create(filepath.Join(node_modules, "file"))
+	ensure.Nil(t, err)
+	defer f.Close()
 
 	return files, dirs
 }
