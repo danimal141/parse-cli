@@ -46,6 +46,7 @@ http://parse.com`,
 	c.AddCommand(webhooks.NewTriggerHooksCmd(e))
 	c.AddCommand(NewUpdateCmd(e))
 	c.AddCommand(NewVersionCmd(e))
+	c.AddCommand(parsecmd.NewCloudCmd(e))
 
 	if len(os.Args) <= 1 {
 		return nil, c
