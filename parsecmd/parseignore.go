@@ -27,6 +27,9 @@ func ignoreErrors(errors []error, e *parsecli.Env) string {
 type legacyRulesMatcher struct{}
 
 func (l legacyRulesMatcher) Match(path string, fi os.FileInfo) (parseignore.Decision, error) {
+	if strings.HasPrefix(path, "node_modules") {
+		return parseignore.Exclude, nil
+	}
 	parts := strings.Split(path, string(filepath.Separator))
 	for _, part := range parts {
 		if strings.HasPrefix(part, ".") ||
