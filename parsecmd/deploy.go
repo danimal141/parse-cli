@@ -385,6 +385,7 @@ func (d *deployCmd) deploy(
 			".js":   {},
 			".ejs":  {},
 			".jade": {},
+			".json": {},
 		},
 		EndPoint:      "scripts",
 		PrevChecksums: prevDeplInfo.Checksums.Cloud,
