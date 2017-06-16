@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/back4app/parse-cli/parsecli"
-	"github.com/back4app/parse-cli/parsecmd"
 	"github.com/back4app/parse-cli/webhooks"
+	"github.com/danimal141/parse-cli/parsecmd"
 	"github.com/spf13/cobra"
 )
 

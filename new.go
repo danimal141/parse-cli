@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
-	"strings"
 	"strconv"
+	"strings"
 
 	"github.com/back4app/parse-cli/parsecli"
-	"github.com/back4app/parse-cli/parsecmd"
+	"github.com/danimal141/parse-cli/parsecmd"
 	"github.com/facebookgo/parse"
 	"github.com/facebookgo/stackerr"
 	"github.com/spf13/cobra"
